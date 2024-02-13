@@ -30,8 +30,9 @@ const isVerbose = verboseFlags.some(flag => args.includes(flag));
 isVerbose && console.log("verbose = true");
 
 const densities = [
-    ["mdpi", 160],
-    ["hdpi", 240],
+    ["mdpi",  160],
+    ["tvdpi", 213],
+    ["hdpi",  240],
 ];
 
 (async function main() {
