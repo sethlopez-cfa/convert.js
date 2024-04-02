@@ -52,7 +52,7 @@ const densities = [
     for (const [densityName, densityValue] of densities) {
         const densityDirectoryPath = path.resolve(filePath, `../../values-${densityName}`);
         const densityFilePath = path.resolve(densityDirectoryPath, fileBasename);
-        const densityFileContents = fileContents.replace(/([1-9]\d*)[ds]p/g, (match, value) => {
+        const densityFileContents = fileContents.replace(/((?:0\.)?[1-9]\d*(?:\.\d+)?)[ds]p/g, (match, value) => {
             return match.replace(value, Math.round(+value * (160 / densityValue)));
         });
 
